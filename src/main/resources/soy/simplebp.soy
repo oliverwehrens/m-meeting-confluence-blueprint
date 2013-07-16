@@ -1,0 +1,15 @@
+{namespace MyPlugin.Blueprints.Simple}
+
+/**
+*  A form that accepts a person's name
+*/
+{template .page1Form}
+ 	<form action="#" method="post" class="aui">
+ 	  <fieldset>
+ 	    <div class="field-group">
+ 	        <label for="vnameId">{getText('my.blueprint.form.label.title.vName')}</label>
+ 	        <input id="vnameId" class="text" type="text" name="vName">
+ 	    </div>
+ 	  </fieldset>
+ 	</form>
+{/template}

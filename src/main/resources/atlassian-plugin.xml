@@ -1,0 +1,70 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}"
+	name="${project.name}" plugins-version="2">
+	<plugin-info>
+		<description>${project.description}</description>
+		<version>${project.version}</version>
+		<vendor name="${project.organization.name}" url="${project.organization.url}" />
+		<param name="plugin-icon">images/pluginIcon.png</param>
+		<param name="plugin-logo">images/pluginLogo.png</param>
+	</plugin-info>
+
+	<!-- add our i18n resource -->
+	<resource type="i18n" name="i18n" location="simplebp" />
+
+	<!-- add our web resources -->
+	<web-resource key="simplebp-resources" name="simplebp Web Resources">
+		<dependency>com.atlassian.auiplugin:ajs</dependency>
+		<dependency>com.atlassian.confluence.plugins.confluence-create-content-plugin:resources</dependency>
+
+		<transformation extension="soy">
+			<transformer key="soyTransformer">
+				<functions>com.atlassian.confluence.plugins.soy:soy-core-functions
+				</functions>
+			</transformer>
+		</transformation>
+
+		<resource type="download" name="simplebp.css" location="/css/simplebp.css" />
+		<resource type="download" name="simplebp.js" location="/js/simplebp.js" />
+		<resource type="download" name="simplebp.soy.js" location="/soy/simplebp.soy" />
+		<resource type="download" name="images/" location="/images" />
+
+		<context>simplebp</context>
+		<context>atl.general</context>
+		<context>atl.admin</context>
+	</web-resource>
+
+	<!-- Blueprint -->
+	<blueprint key="my-blueprint" content-template-key="simplebp-template"
+		index-key="my-index" >
+		<dialog-wizard key="simplebp-wizard">
+		    <dialog-page id="pageId" template-key="MyPlugin.Blueprints.Simple.page1Form" 
+		        title-key="my.blueprint.wizard.page1.title" 
+		        description-header-key="my.blueprint.wizard.page1.desc.header"
+		        description-content-key="my.blueprint.wizard.page1.desc.content"
+		        last="true"/>
+		</dialog-wizard>
+	</blueprint>
+
+	<!-- Add to the Create Menu -->
+	<web-item key="create-by-sample-template" i18n-name-key="my.create-link.title"
+		section="system.create.dialog/content">
+		<description key="my.create-link.description" />
+		<resource name="icon" type="download" location="/images/myblueprint.png" />
+		<param name="blueprintKey" value="my-blueprint" />
+	</web-item>
+
+
+	<!-- Template for Blueprint -->
+	<content-template key="simplebp-template"
+		template-title-key="my.blueprint.title">
+		<resource name="template" type="download" location="/templates/mytemplate.xml" />
+<!-- 		<context-provider -->
+<!-- 			class="com.example.plugins.tutorial.confluence.simplebp.MyContextProvider" /> -->
+	</content-template>
+
+
+	<!-- import from the product container -->
+	<component-import key="applicationProperties"
+		interface="com.atlassian.sal.api.ApplicationProperties" />
+
+</atlassian-plugin>
