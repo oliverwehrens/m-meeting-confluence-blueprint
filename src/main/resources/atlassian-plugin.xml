@@ -37,7 +37,7 @@
 	<blueprint key="my-blueprint" content-template-key="simplebp-template"
 		index-key="my-index" >
 		<dialog-wizard key="simplebp-wizard">
-		    <dialog-page id="pageId" template-key="MyPlugin.Blueprints.Simple.page1Form" 
+		    <dialog-page id="page1Id" template-key="MyPlugin.Blueprints.Simple.page1Form" 
 		        title-key="my.blueprint.wizard.page1.title" 
 		        description-header-key="my.blueprint.wizard.page1.desc.header"
 		        description-content-key="my.blueprint.wizard.page1.desc.content"
