@@ -1,22 +1,16 @@
 package com.example.plugins.tutorial.confluence.simplebp;
 
-import java.util.Map;
+import com.atlassian.confluence.plugins.createcontent.api.contextproviders.AbstractBlueprintContextProvider;
+import com.atlassian.confluence.plugins.createcontent.api.contextproviders.BlueprintContext;
 
-import com.atlassian.plugin.PluginParseException;
-import com.atlassian.plugin.web.ContextProvider;
+public class MyContextProvider extends AbstractBlueprintContextProvider {
 
-public class MyContextProvider implements ContextProvider {
 
-	@Override
-	public void init(Map<String, String> params) throws PluginParseException {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public Map<String, Object> getContextMap(Map<String, Object> context) {
-		context.put("vName", "Sherlock");
-		return context;
-	}
+    @Override
+    protected BlueprintContext updateBlueprintContext(BlueprintContext blueprintContext)
+    {
+        blueprintContext.put("vName", "Sherlock");
+        return blueprintContext;
+    }
 
 }
