@@ -3,6 +3,8 @@
 This code is an example of a simple Confluence Blueprint. It contains no context provider 
 and therefore no Java classes.
 
+For more information, see: [Tutorial: Write an intermediate Confluence Blueprint][1].
+
 ## Running locally
 
 To run this app locally, make sure that you have the [Atlassian Plugin SDK][2] installed, and then run:
