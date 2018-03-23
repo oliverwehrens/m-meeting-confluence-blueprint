@@ -5,12 +5,9 @@ import com.atlassian.confluence.plugins.createcontent.api.contextproviders.Bluep
 
 public class MyContextProvider extends AbstractBlueprintContextProvider {
 
-
     @Override
-    protected BlueprintContext updateBlueprintContext(BlueprintContext blueprintContext)
-    {
+    protected BlueprintContext updateBlueprintContext(BlueprintContext blueprintContext) {
         blueprintContext.put("vName", "Sherlock");
         return blueprintContext;
     }
-
 }

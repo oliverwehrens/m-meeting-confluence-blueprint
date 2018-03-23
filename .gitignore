@@ -7,3 +7,5 @@
 # Ignore target directories
 target/**/*
 .settings/**/*
+.idea/
+*.iml
