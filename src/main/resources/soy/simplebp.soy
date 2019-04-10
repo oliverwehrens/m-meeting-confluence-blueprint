@@ -6,8 +6,23 @@
  	<form action="#" method="post" class="aui">
  	  <fieldset>
  	    <div class="field-group">
- 	        <label for="vname">{getText('my.blueprint.form.label.title.vName')}</label>
- 	        <input id="vname" class="text" type="text" name="vName">
+ 	        <label for="vThema">{getText('my.blueprint.form.label.title.vThema')}</label>
+ 	        <input id="vThema" class="text" type="text" name="vThema">
+ 	    </div>
+        <div class="field-group">
+            <label for="vTyp">{getText('my.blueprint.form.label.typ')}</label>
+            <select id="vTyp" class="select" name="vTyp">
+                <option value="{getText('my.blueprint.option1')}">{getText('my.blueprint.option1')}</option>
+                <option value="{getText('my.blueprint.option2')}">{getText('my.blueprint.option2')}</option>
+                <option value="{getText('my.blueprint.option3')}">{getText('my.blueprint.option3')}</option>
+                <option value="{getText('my.blueprint.option4')}">{getText('my.blueprint.option4')}</option>
+                <option value="{getText('my.blueprint.option5')}">{getText('my.blueprint.option5')}</option>
+                <option value="{getText('my.blueprint.option6')}">{getText('my.blueprint.option6')}</option>
+            </select>
+        </div>
+ 	    <div class="field-group">
+ 	        <label for="vZeit">{getText('my.blueprint.form.label.title.vZeit')}</label>
+ 	        <input id="vZeit" class="text" type="text" name="vZeit">
  	    </div>
  	  </fieldset>
  	</form>
