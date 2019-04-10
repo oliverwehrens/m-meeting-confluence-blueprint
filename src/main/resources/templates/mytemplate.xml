@@ -1,12 +1,37 @@
-<table>
-  <tbody>
-    <tr>
-      <th>Name</th>
-      <th>Date</th>
-    </tr>
-    <tr>
-      <td><at:var at:name="vName" /></td>
-      <td><ac:placeholder>Enter today's date here</ac:placeholder></td>
-    </tr>
-  </tbody>
-</table>
+<ac:structured-macro ac:name="details">
+    <table class="relative-table" style="width: 36.119587%;">
+        <colgroup>
+            <col style="width: 15.059221%;"/>
+            <col style="width: 84.94078%;"/>
+        </colgroup>
+        <tbody>
+            <tr>
+                <td>Thema</td>
+                <td>
+                    <at:var at:name="vThema"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>
+                    <ac:macro ac:name="status">
+                        <ac:parameter ac:name="title">Nicht entschieden</ac:parameter>
+                    </ac:macro>
+                </td>
+            </tr>
+            <tr>
+                <td>Zeitbedarf</td>
+                <td>
+                    <at:var at:name="vZeit"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Typ</td>
+                <td>
+                    <at:var at:name="vTyp"/>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</ac:structured-macro>
