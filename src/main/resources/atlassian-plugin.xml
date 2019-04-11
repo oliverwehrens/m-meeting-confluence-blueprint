@@ -30,7 +30,7 @@
     </web-resource>
 
     <!-- Blueprint -->
-    <blueprint key="my-blueprint" content-template-key="simplebp-template" index-key="agenda"
+    <blueprint key="my-blueprint" content-template-key="simplebp-template" index-key="Entscheidung"
                i18n-name-key="my.blueprint.name">
         <dialog-wizard key="simplebp-wizard">
             <dialog-page id="page1Id"
@@ -42,6 +42,19 @@
         </dialog-wizard>
     </blueprint>
 
+    <blueprint key="agenda-information" content-template-key="agenda-information-template" index-key="Information"
+               i18n-name-key="agenda.information.name">
+        <dialog-wizard key="agenda-information-wizard">
+            <dialog-page id="agenda-information-Id"
+                         template-key="MyPlugin.Blueprints.Simple.pageAgendaInformationForm"
+                         title-key="agenda.information.wizard.page1.title"
+                         description-header-key="agenda.information.wizard.page1.desc.header"
+                         description-content-key="agenda.information.wizard.page1.desc.content"
+                         last="true"/>
+        </dialog-wizard>
+    </blueprint>
+
+
     <!-- Add to the Create Menu -->
     <web-item key="create-by-sample-template" i18n-name-key="my.create-link.title"
               section="system.create.dialog/content">
@@ -50,12 +63,26 @@
         <param name="blueprintKey" value="my-blueprint"/>
     </web-item>
 
+    <web-item key="create-by-agenda-information-template" i18n-name-key="agenda.information.create-link.title"
+              section="system.create.dialog/content">
+        <description key="agenda.information.create-link.description"/>
+        <resource name="icon" type="download" location="/images/myblueprint.png"/>
+        <param name="blueprintKey" value="agenda-information"/>
+    </web-item>
+
 
     <!-- Template for Blueprint -->
     <content-template key="simplebp-template" i18n-name-key="my.blueprint.title">
         <resource name="template" type="download" location="/templates/agenda.xml"/>
-        <!--<context-provider
-            class="com.example.plugins.tutorial.confluence.simplebp.MyContextProvider" />-->
+        <context-provider
+            class="com.example.plugins.tutorial.confluence.simplebp.MyContextProvider" />
     </content-template>
+
+    <content-template key="agenda-information-template" i18n-name-key="agenda.information.blueprint.title">
+        <resource name="template" type="download" location="/templates/information.xml"/>
+        <context-provider
+            class="com.example.plugins.tutorial.confluence.simplebp.MyContextProvider" />
+    </content-template>
+
 
 </atlassian-plugin>

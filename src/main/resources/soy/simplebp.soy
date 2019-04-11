@@ -1,6 +1,6 @@
 {namespace MyPlugin.Blueprints.Simple}
 /**
-*  A form that accepts a person's name
+*  A form that records an Entscheidung
 */
 {template .page1Form}
  	<form action="#" method="post" class="aui">
@@ -15,9 +15,33 @@
                 <option value="{getText('my.blueprint.option1')}">{getText('my.blueprint.option1')}</option>
                 <option value="{getText('my.blueprint.option2')}">{getText('my.blueprint.option2')}</option>
                 <option value="{getText('my.blueprint.option3')}">{getText('my.blueprint.option3')}</option>
-                <option value="{getText('my.blueprint.option4')}">{getText('my.blueprint.option4')}</option>
-                <option value="{getText('my.blueprint.option5')}">{getText('my.blueprint.option5')}</option>
-                <option value="{getText('my.blueprint.option6')}">{getText('my.blueprint.option6')}</option>
+            </select>
+        </div>
+ 	    <div class="field-group">
+ 	        <label for="vZeit">{getText('my.blueprint.form.label.title.vZeit')}</label>
+ 	        <input id="vZeit" class="text" type="text" name="vZeit">
+ 	    </div>
+ 	  </fieldset>
+ 	</form>
+{/template}
+
+
+/**
+*  A form records agenda information
+*/
+{template .pageAgendaInformationForm}
+ 	<form action="#" method="post" class="aui">
+ 	  <fieldset>
+ 	    <div class="field-group">
+ 	        <label for="vThema">{getText('agenda.information.form.label.title.vInformation')}</label>
+ 	        <input id="vThema" class="text" type="text" name="vThema">
+ 	    </div>
+        <div class="field-group">
+            <label for="vTyp">{getText('my.blueprint.form.label.typ')}</label>
+            <select id="vTyp" class="select" name="vTyp">
+                <option value="{getText('my.blueprint.option1')}">{getText('my.blueprint.option1')}</option>
+                <option value="{getText('my.blueprint.option2')}">{getText('my.blueprint.option2')}</option>
+                <option value="{getText('my.blueprint.option3')}">{getText('my.blueprint.option3')}</option>
             </select>
         </div>
  	    <div class="field-group">

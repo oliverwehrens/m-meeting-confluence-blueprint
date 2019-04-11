@@ -7,7 +7,8 @@ public class MyContextProvider extends AbstractBlueprintContextProvider {
 
     @Override
     protected BlueprintContext updateBlueprintContext(BlueprintContext blueprintContext) {
-        blueprintContext.put("vName", "Sherlock");
+        final String title = (String)blueprintContext.get("vThema");
+        blueprintContext.setTitle(title);
         return blueprintContext;
     }
 }

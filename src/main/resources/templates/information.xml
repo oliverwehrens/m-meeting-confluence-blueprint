@@ -1,0 +1,46 @@
+<ac:structured-macro ac:name="details" ac:schema-version="1">
+    <ac:rich-text-body>
+        <table class="relative-table" style="width: 50%;">
+            <colgroup>
+                <col style="width: 15%;"/>
+                <col style="width: 85%;"/>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Status</th>
+                    <td>
+                        <ac:structured-macro ac:name="status" ac:schema-version="1">
+                            <ac:parameter ac:name="title">Information</ac:parameter>
+                            <ac:parameter ac:name="subtle">true</ac:parameter>
+                        </ac:structured-macro>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Zeitbedarf</th>
+                    <td>
+                        <at:var at:name="vZeit"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Verantwortlich</th>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Zusammenfassung</th>
+                    <td>
+                        <ac:placeholder>Information</ac:placeholder>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Typ</th>
+                    <td>
+                        <at:var at:name="vTyp"/>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </ac:rich-text-body>
+</ac:structured-macro>
