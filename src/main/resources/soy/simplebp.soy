@@ -10,6 +10,14 @@
  	        <input id="vThema" class="text" type="text" name="vThema">
  	    </div>
         <div class="field-group">
+            <label for="vStatus">{getText('my.blueprint.form.label.status')}</label>
+            <select id="vStatus" class="select" name="vStatus">
+                <option value="{getText('agenda.decision.option1')}">{getText('agenda.decision.option1')}</option>
+                <option value="{getText('agenda.decision.option2')}">{getText('agenda.decision.option2')}</option>
+                <option value="{getText('agenda.decision.option3')}">{getText('agenda.decision.option3')}</option>
+            </select>
+        </div>
+        <div class="field-group">
             <label for="vTyp">{getText('my.blueprint.form.label.typ')}</label>
             <select id="vTyp" class="select" name="vTyp">
                 <option value="{getText('my.blueprint.option1')}">{getText('my.blueprint.option1')}</option>
@@ -17,6 +25,12 @@
                 <option value="{getText('my.blueprint.option3')}">{getText('my.blueprint.option3')}</option>
             </select>
         </div>
+ 	    <div class="field-group">
+ 	        <label for="vVerantwortlich">{getText('my.blueprint.form.label.title.vVerantwortlich')}</label>
+ 	        <input id="vVerantwortlich" class="text" type="text long-field autocomplete-user"
+ 	        data-none-message="No users found" data-template="{literal}{username}{/literal}"
+ 	        placeholder="{getText('blueprint.form.name-label.placeholder')}" name="vVerantwortlich">
+ 	    </div>
  	    <div class="field-group">
  	        <label for="vZeit">{getText('my.blueprint.form.label.title.vZeit')}</label>
  	        <input id="vZeit" class="text" type="text" name="vZeit">
@@ -47,6 +61,20 @@
  	    <div class="field-group">
  	        <label for="vZeit">{getText('my.blueprint.form.label.title.vZeit')}</label>
  	        <input id="vZeit" class="text" type="text" name="vZeit">
+ 	    </div>
+ 	  </fieldset>
+ 	</form>
+{/template}
+
+/**
+*  A form records agenda information
+*/
+{template .pageAgendaNewForm}
+ 	<form action="#" method="post" class="aui">
+ 	  <fieldset>
+ 	    <div class="field-group">
+ 	        <label for="vTitle">{getText('agenda.new.form.label.title.vTitle')}</label>
+ 	        <input id="vTitle" class="text" type="text" name="vTitle">
  	    </div>
  	  </fieldset>
  	</form>

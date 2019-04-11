@@ -1,0 +1,59 @@
+<ac:structured-macro ac:name="details" ac:schema-version="1">
+    <ac:rich-text-body>
+        <table class="relative-table" style="width: 50%;">
+            <colgroup>
+                <col style="width: 15%;"/>
+                <col style="width: 85%;"/>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Status</th>
+<td><ac:structured-macro ac:name="status" ac:schema-version="1"><ac:parameter ac:name="title"><at:var at:name="vStatus"/></ac:parameter></ac:structured-macro></td>
+                </tr>
+                <tr>
+                    <th>Zeitbedarf</th>
+<td><at:var at:name="vZeit"/></td>
+                </tr>
+                <tr>
+                    <th>Verantwortlich</th>
+<td><at:var at:name="vVerantwortlich" at:rawxhtml="true"/></td>
+                </tr>
+                <tr>
+                    <th>Erledigt bis ...</th>
+<td><at:var at:name="vErledigtBis"/></td>
+                </tr>
+                <tr>
+                    <th>Zusammenfassung</th>
+<td><ac:placeholder>Wie wurde entschieden...</ac:placeholder></td>
+                </tr>
+
+                <tr>
+                    <th>Typ</th>
+<td><at:var at:name="vTyp"/></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </ac:rich-text-body>
+</ac:structured-macro>
+
+
+<p class="auto-cursor-target">
+<span style="font-size: 20.0px;letter-spacing: 0.0px;">Hintergrund</span>
+</p>
+<p>
+<ac:placeholder>Welche Details oder Optionen sind für diese Entscheidung relevant?</ac:placeholder>
+</p>
+<h2>Action items</h2><ac:task-list>
+<ac:task>
+    <ac:task-id>1</ac:task-id>
+    <ac:task-status>incomplete</ac:task-status>
+    <ac:task-body>
+        <ac:placeholder ac:type="mention">Aufgaben bitte hier eintragen. Benutze &quot;@&quot; um jemanden diese Aufgabe zuzuweisen und &quot;//&quot; um ein Datum zu bestimmen.
+        </ac:placeholder>
+    </ac:task-body>
+</ac:task>
+</ac:task-list>
+
+<p/>
+<p/>

@@ -55,25 +55,45 @@
     </blueprint>
 
 
+    <blueprint key="agenda-new" content-template-key="agenda-new-template" index-key="agenda"
+               i18n-name-key="agenda.new">
+        <dialog-wizard key="agenda-new-wizard">
+            <dialog-page id="agenda-new-Id"
+                         template-key="MyPlugin.Blueprints.Simple.pageAgendaNewForm"
+                         title-key="agenda.new.wizard.page1.title"
+                         description-header-key="agenda.new.wizard.page1.desc.header"
+                         description-content-key="agenda.new.wizard.page1.desc.content"
+                         last="true"/>
+        </dialog-wizard>
+    </blueprint>
+
+
     <!-- Add to the Create Menu -->
     <web-item key="create-by-sample-template" i18n-name-key="my.create-link.title"
               section="system.create.dialog/content">
         <description key="my.create-link.description"/>
-        <resource name="icon" type="download" location="/images/myblueprint.png"/>
+        <resource name="icon" type="download" location="/images/m!entscheidung.png"/>
         <param name="blueprintKey" value="my-blueprint"/>
     </web-item>
 
     <web-item key="create-by-agenda-information-template" i18n-name-key="agenda.information.create-link.title"
               section="system.create.dialog/content">
         <description key="agenda.information.create-link.description"/>
-        <resource name="icon" type="download" location="/images/myblueprint.png"/>
+        <resource name="icon" type="download" location="/images/m!information.png"/>
         <param name="blueprintKey" value="agenda-information"/>
+    </web-item>
+
+    <web-item key="create-by-agenda-new-template" i18n-name-key="agenda.new.create-link.title"
+              section="system.create.dialog/content">
+        <description key="agenda.new.create-link.description"/>
+        <resource name="icon" type="download" location="/images/m!meeting.png"/>
+        <param name="blueprintKey" value="agenda-new"/>
     </web-item>
 
 
     <!-- Template for Blueprint -->
     <content-template key="simplebp-template" i18n-name-key="my.blueprint.title">
-        <resource name="template" type="download" location="/templates/agenda.xml"/>
+        <resource name="template" type="download" location="/templates/entscheidung.xml"/>
         <context-provider
             class="com.example.plugins.tutorial.confluence.simplebp.MyContextProvider" />
     </content-template>
@@ -82,6 +102,12 @@
         <resource name="template" type="download" location="/templates/information.xml"/>
         <context-provider
             class="com.example.plugins.tutorial.confluence.simplebp.MyContextProvider" />
+    </content-template>
+
+    <content-template key="agenda-new-template" i18n-name-key="agenda.new.blueprint.title">
+        <resource name="template" type="download" location="/templates/agenda.xml"/>
+        <context-provider
+                class="com.example.plugins.tutorial.confluence.simplebp.NewAgendaProvider" />
     </content-template>
 
 

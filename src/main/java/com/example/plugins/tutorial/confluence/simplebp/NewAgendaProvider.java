@@ -3,16 +3,12 @@ package com.example.plugins.tutorial.confluence.simplebp;
 import com.atlassian.confluence.plugins.createcontent.api.contextproviders.AbstractBlueprintContextProvider;
 import com.atlassian.confluence.plugins.createcontent.api.contextproviders.BlueprintContext;
 
-public class MyContextProvider extends AbstractBlueprintContextProvider {
+public class NewAgendaProvider extends AbstractBlueprintContextProvider {
 
     @Override
     protected BlueprintContext updateBlueprintContext(BlueprintContext blueprintContext) {
-        final String title = (String)blueprintContext.get("vThema");
+        final String title = (String)blueprintContext.get("vTitle");
         blueprintContext.setTitle(title);
-
-
-        String vVerantwortlich = (String) blueprintContext.get("vVerantwortlich");
-        blueprintContext.put("vVerantwortlich", "<ac:link><ri:user ri:username=\"" + vVerantwortlich + "\"/></ac:link>");
 
         return blueprintContext;
     }
