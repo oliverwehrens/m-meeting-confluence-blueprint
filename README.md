@@ -1,15 +1,13 @@
-# Tutorial: Write an intermediate blueprint plugin
+# Confluence Meeting plugin
 
-This code is an example of a simple Confluence Blueprint. It contains no context provider 
-and therefore no Java classes.
+Dieses Plugin enthält 3 Blueprints für die Erstellung von Meetings.
 
-For more information, see: [Tutorial: Write an intermediate Confluence Blueprint][1].
-
-## Running locally
-
-To run this app locally, make sure that you have the [Atlassian Plugin SDK][2] installed, and then run:
-
-    atlas-mvn confluence:run
-
- [1]: https://developer.atlassian.com/confdev/confluence-plugin-guide/confluence-blueprints/write-an-intermediate-blueprint-plugin
- [2]: https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project
+- Neues Meeting
+  Erzeugt ein neues Template Meeting
+  
+- Entscheidung
+  Erzeugt eine neue Entscheidung die vorgestellt werden soll
+  
+- Information
+  Zeigt eine Information die vorgestellt werden soll
+  
