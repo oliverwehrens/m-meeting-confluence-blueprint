@@ -3,14 +3,14 @@
 <ac:structured-macro ac:name="create-from-template" ac:schema-version="1"
                      ac:macro-id="9b203744-1587-4a3b-a498-0464758927fe">
     <ac:parameter ac:name="blueprintModuleCompleteKey">
-        com.example.plugins.tutorial.confluence.simplebp.simplebp:my-blueprint
+        net.wehrens.confluence.meeting.meeting:my-blueprint
     </ac:parameter>
     <ac:parameter ac:name="buttonLabel">Neue Entscheidung</ac:parameter>
 </ac:structured-macro>
 <ac:structured-macro ac:name="create-from-template" ac:schema-version="1"
                      ac:macro-id="a2cf868f-c0ff-4797-9e9c-c3b25f8f79e4">
     <ac:parameter ac:name="blueprintModuleCompleteKey">
-        com.example.plugins.tutorial.confluence.simplebp.simplebp:agenda-information
+        net.wehrens.confluence.meeting.meeting:agenda-information
     </ac:parameter>
     <ac:parameter ac:name="buttonLabel">Neue Information</ac:parameter>
 </ac:structured-macro>

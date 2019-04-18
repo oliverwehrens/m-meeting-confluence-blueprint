@@ -2,13 +2,13 @@
 <p>
     <ac:structured-macro ac:name="create-from-template" ac:schema-version="1">
         <ac:parameter ac:name="blueprintModuleCompleteKey">
-            com.example.plugins.tutorial.confluence.simplebp.simplebp:my-blueprint
+            net.wehrens.confluence.meeting.meeting:my-blueprint
         </ac:parameter>
         <ac:parameter ac:name="buttonLabel">Neue Entscheidung</ac:parameter>
     </ac:structured-macro>
     <ac:structured-macro ac:name="create-from-template" ac:schema-version="1">
         <ac:parameter ac:name="blueprintModuleCompleteKey">
-            com.example.plugins.tutorial.confluence.simplebp.simplebp:agenda-information
+            net.wehrens.confluence.meeting.meeting:agenda-information
         </ac:parameter>
         <ac:parameter ac:name="buttonLabel">Neue Information</ac:parameter>
     </ac:structured-macro>

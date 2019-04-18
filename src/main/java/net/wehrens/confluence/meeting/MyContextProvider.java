@@ -1,4 +1,4 @@
-package com.example.plugins.tutorial.confluence.simplebp;
+package net.wehrens.confluence.meeting;
 
 import com.atlassian.confluence.plugins.createcontent.api.contextproviders.AbstractBlueprintContextProvider;
 import com.atlassian.confluence.plugins.createcontent.api.contextproviders.BlueprintContext;

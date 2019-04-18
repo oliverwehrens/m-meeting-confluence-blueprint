@@ -8,10 +8,10 @@
     </plugin-info>
 
     <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="simplebp"/>
+    <resource type="i18n" name="i18n" location="meeting"/>
 
     <!-- add our web resources -->
-    <web-resource key="simplebp-resources" name="simplebp Web Resources">
+    <web-resource key="meeting-resources" name="meeting Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
         <dependency>com.atlassian.confluence.plugins.confluence-create-content-plugin:resources</dependency>
 
@@ -21,20 +21,20 @@
             </transformer>
         </transformation>
 
-        <resource type="download" name="simplebp.css" location="/css/simplebp.css"/>
-        <resource type="download" name="simplebp.js" location="/js/simplebp.js"/>
-        <resource type="download" name="simplebp.soy.js" location="/soy/simplebp.soy"/>
+        <resource type="download" name="meeting.css" location="/css/meeting.css"/>
+        <resource type="download" name="meeting.js" location="/js/meeting.js"/>
+        <resource type="download" name="meeting.soy.js" location="/soy/meeting.soy"/>
         <resource type="download" name="images/" location="/images"/>
 
         <context>create-content</context>
     </web-resource>
 
     <!-- Blueprint -->
-    <blueprint key="my-blueprint" content-template-key="simplebp-template" index-key="Entscheidung"
+    <blueprint key="agenda-decision" content-template-key="agenda-decision-template" index-key="Entscheidung"
                i18n-name-key="my.blueprint.name">
-        <dialog-wizard key="simplebp-wizard">
+        <dialog-wizard key="meeting-wizard">
             <dialog-page id="page1Id"
-                         template-key="MyPlugin.Blueprints.Simple.page1Form"
+                         template-key="MyPlugin.Blueprints.Meeting.pageAgendaDecisionForm"
                          title-key="my.blueprint.wizard.page1.title"
                          description-header-key="my.blueprint.wizard.page1.desc.header"
                          description-content-key="my.blueprint.wizard.page1.desc.content"
@@ -46,7 +46,7 @@
                i18n-name-key="agenda.information.name">
         <dialog-wizard key="agenda-information-wizard">
             <dialog-page id="agenda-information-Id"
-                         template-key="MyPlugin.Blueprints.Simple.pageAgendaInformationForm"
+                         template-key="MyPlugin.Blueprints.Meeting.pageAgendaInformationForm"
                          title-key="agenda.information.wizard.page1.title"
                          description-header-key="agenda.information.wizard.page1.desc.header"
                          description-content-key="agenda.information.wizard.page1.desc.content"
@@ -59,7 +59,7 @@
                i18n-name-key="agenda.new">
         <dialog-wizard key="agenda-new-wizard">
             <dialog-page id="agenda-new-Id"
-                         template-key="MyPlugin.Blueprints.Simple.pageAgendaNewForm"
+                         template-key="MyPlugin.Blueprints.Meeting.pageAgendaNewForm"
                          title-key="agenda.new.wizard.page1.title"
                          description-header-key="agenda.new.wizard.page1.desc.header"
                          description-content-key="agenda.new.wizard.page1.desc.content"
@@ -69,11 +69,11 @@
 
 
     <!-- Add to the Create Menu -->
-    <web-item key="create-by-sample-template" i18n-name-key="my.create-link.title"
+    <web-item key="create-by-decision-template" i18n-name-key="my.create-link.title"
               section="system.create.dialog/content">
         <description key="my.create-link.description"/>
         <resource name="icon" type="download" location="/images/m!entscheidung.png"/>
-        <param name="blueprintKey" value="my-blueprint"/>
+        <param name="blueprintKey" value="agenda-decision"/>
     </web-item>
 
     <web-item key="create-by-agenda-information-template" i18n-name-key="agenda.information.create-link.title"
@@ -92,22 +92,22 @@
 
 
     <!-- Template for Blueprint -->
-    <content-template key="simplebp-template" i18n-name-key="my.blueprint.title">
+    <content-template key="agenda-decision-template" i18n-name-key="my.blueprint.title">
         <resource name="template" type="download" location="/templates/entscheidung.xml"/>
         <context-provider
-            class="com.example.plugins.tutorial.confluence.simplebp.MyContextProvider" />
+            class="net.wehrens.confluence.meeting.MyContextProvider" />
     </content-template>
 
     <content-template key="agenda-information-template" i18n-name-key="agenda.information.blueprint.title">
         <resource name="template" type="download" location="/templates/information.xml"/>
         <context-provider
-            class="com.example.plugins.tutorial.confluence.simplebp.MyContextProvider" />
+            class="net.wehrens.confluence.meeting.MyContextProvider" />
     </content-template>
 
     <content-template key="agenda-new-template" i18n-name-key="agenda.new.blueprint.title">
         <resource name="template" type="download" location="/templates/agenda.xml"/>
         <context-provider
-                class="com.example.plugins.tutorial.confluence.simplebp.NewAgendaProvider" />
+                class="net.wehrens.confluence.meeting.NewAgendaProvider" />
     </content-template>
 
 

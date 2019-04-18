@@ -1,4 +1,4 @@
-Confluence.Blueprint.setWizard('com.example.plugins.tutorial.confluence.simplebp.simplebp:create-by-sample-template', function(wizard) {
+Confluence.Blueprint.setWizard('net.wehrens.confluence.meeting.meeting:create-by-decision-template', function(wizard) {
 	 wizard.on('submit.page1Id', function(e, state) {	
 		 var vName = state.pageData.vThema;
 		 if (!vName){
@@ -9,7 +9,7 @@ Confluence.Blueprint.setWizard('com.example.plugins.tutorial.confluence.simplebp
  });
 
 
-Confluence.Blueprint.setWizard('com.example.plugins.tutorial.confluence.simplebp.simplebp:create-by-agenda-information-template', function(wizard) {
+Confluence.Blueprint.setWizard('net.wehrens.confluence.meeting.meeting:create-by-agenda-information-template', function(wizard) {
     wizard.on('submit.agenda-information-Id', function(e, state) {
         var vName = state.pageData.vThema;
         if (!vName){
