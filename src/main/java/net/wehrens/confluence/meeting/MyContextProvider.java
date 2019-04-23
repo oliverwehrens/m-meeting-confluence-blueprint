@@ -13,6 +13,7 @@ public class MyContextProvider extends AbstractBlueprintContextProvider {
 
         String vVerantwortlich = (String) blueprintContext.get("vVerantwortlich");
         blueprintContext.put("vVerantwortlich", "<ac:link><ri:user ri:username=\"" + vVerantwortlich + "\"/></ac:link>");
+        blueprintContext.put("vDatum", "@currentDate");
 
         return blueprintContext;
     }

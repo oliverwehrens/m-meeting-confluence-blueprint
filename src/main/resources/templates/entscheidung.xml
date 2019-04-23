@@ -11,6 +11,10 @@
 <td><ac:structured-macro ac:name="status" ac:schema-version="1"><ac:parameter ac:name="title"><at:var at:name="vStatus"/></ac:parameter></ac:structured-macro></td>
                 </tr>
                 <tr>
+                    <th>Datum</th>
+                    <td><at:var at:name="vDatum" at:rawxhtml="true"/></td>
+                </tr>
+                <tr>
                     <th>Zeitbedarf</th>
 <td><at:var at:name="vZeit"/></td>
                 </tr>

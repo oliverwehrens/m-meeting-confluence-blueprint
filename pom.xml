@@ -7,14 +7,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.wehrens.confluence.meeting</groupId>
     <artifactId>meeting</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.81</version>
 
     <organization>
         <name>Oliver Wehrens</name>
         <url>https://oliver.wehrens.net</url>
     </organization>
 
-    <name>simplebp</name>
+    <name>M! meeting</name>
     <description>Meeting Plugin for  Atlassian Confluence.</description>
     <packaging>atlassian-plugin</packaging>
 
@@ -95,7 +95,7 @@
 
                         <!-- Add package to export here -->
                         <Export-Package>
-                            com.example.plugins.tutorial.confluence.simplebp.api,
+                            net.wehrens.confluence.meeting.api,
                         </Export-Package>
 
                         <!-- Add package import here -->

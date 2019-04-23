@@ -2,7 +2,7 @@
 <p>
     <ac:structured-macro ac:name="create-from-template" ac:schema-version="1">
         <ac:parameter ac:name="blueprintModuleCompleteKey">
-            net.wehrens.confluence.meeting.meeting:my-blueprint
+            net.wehrens.confluence.meeting.meeting:agenda-decision
         </ac:parameter>
         <ac:parameter ac:name="buttonLabel">Neue Entscheidung</ac:parameter>
     </ac:structured-macro>
