@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.wehrens.confluence.meeting</groupId>
     <artifactId>meeting</artifactId>
-    <version>0.81</version>
+    <version>0.82-SNAPSHOT</version>
 
     <organization>
         <name>Oliver Wehrens</name>
