@@ -1,5 +1,8 @@
 <h2>Meeting Agenda</h2>
 <p>
+Teilnehmer: <ac:placeholder>Teilnehmer mit @[Name] kennzeichnen</ac:placeholder>
+</p>
+<p>
     <ac:structured-macro ac:name="create-from-template" ac:schema-version="1">
         <ac:parameter ac:name="blueprintModuleCompleteKey">
             net.wehrens.confluence.meeting.meeting:agenda-decision
