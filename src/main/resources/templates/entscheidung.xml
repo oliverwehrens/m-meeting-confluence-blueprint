@@ -14,27 +14,11 @@
                     <th>Datum</th>
                     <td><at:var at:name="vDatum" at:rawxhtml="true"/></td>
                 </tr>
-                <tr>
-                    <th>Zeitbedarf</th>
-<td><at:var at:name="vZeit"/></td>
-                </tr>
-                <tr>
-                    <th>Verantwortlich</th>
-<td><at:var at:name="vVerantwortlich" at:rawxhtml="true"/></td>
-                </tr>
-                <tr>
-                    <th>Erledigt bis ...</th>
-<td><at:var at:name="vErledigtBis"/></td>
-                </tr>
-                <tr>
-                    <th>Zusammenfassung</th>
-<td><ac:placeholder>Wie wurde entschieden...</ac:placeholder></td>
-                </tr>
-
-                <tr>
-                    <th>Typ</th>
-<td><at:var at:name="vTyp"/></td>
-                </tr>
+                <tr><th>Zeitbedarf</th><td><at:var at:name="vZeit"/></td></tr>
+                <tr><th>Verantwortlich</th><td><at:var at:name="vVerantwortlich" at:rawxhtml="true"/></td></tr>
+                <tr><th>Erledigt bis ...</th><td><at:var at:name="vErledigtBis"/></td></tr>
+                <tr><th>Zusammenfassung</th><td><ac:placeholder>Wie wurde entschieden...</ac:placeholder></td></tr>
+                <tr><th>Typ</th><td><at:var at:name="vTyp"/></td></tr>
 
             </tbody>
         </table>
