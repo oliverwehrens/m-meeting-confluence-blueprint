@@ -13,7 +13,7 @@ public class MyContextProvider extends AbstractBlueprintContextProvider {
         blueprintContext.setTitle(title);
 
         String vVerantwortlich = (String) blueprintContext.get("vVerantwortlich");
-        blueprintContext.put("vVerantwortlich", "<ac:link><ri:user ri:username=\"" + vVerantwortlich + "\"/></ac:link>");
+        blueprintContext.put("vVerantwortlich", "<ri:user ri:username=\"" + vVerantwortlich + "\"/>");
         LocalDate localDate = LocalDate.now();
         String monthValue = getLeading0(localDate.getMonthValue());
         String dayOfMonth = getLeading0(localDate.getDayOfMonth());
